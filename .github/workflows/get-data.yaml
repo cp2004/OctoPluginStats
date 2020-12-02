@@ -1,0 +1,25 @@
+name: Get new data
+on:
+  schedule:
+    # Every day, 5 mins past, hopefully?
+    - cron: "5 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  get-data:
+    name: Get latest data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 🏗 Set up Python 3.9
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: 🚀 Run script
+        run: |
+          python scripts/get_data.py
+      - uses: EndBug/add-and-commit@v5
+        message: Update stats
+        author_name: 'github-actions[bot]'
+        author_email: 'github-actions[bot]@users.noreply.github.com'
+
