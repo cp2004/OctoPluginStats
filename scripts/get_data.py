@@ -40,9 +40,9 @@ TODAY = time.strftime("%Y-%m-%d")
 
 
 # Read current data (if any)
-if os.path.isfile(os.path.join("..", "data", "stats.json")):
+if os.path.isfile(os.path.abspath(os.path.join("data", "stats.json"))):
     print("Reading stored data")
-    with open(os.path.join("..", "data", "stats.json"), "rt") as file:
+    with open(os.path.abspath(os.path.join("data", "stats.json")), "rt") as file:
         DATA = json.load(file)
 
 # Get the data
@@ -88,7 +88,7 @@ for URL in [STATS_30_DAYS]:
 
 
 # write back to the file
-with open(os.path.join("..", "data", "stats.json"), "wt") as file:
+with open(os.path.abspath(os.path.join("data", "stats.json")), "wt") as file:
     json.dump(DATA, file)
 
 print("Done!")
