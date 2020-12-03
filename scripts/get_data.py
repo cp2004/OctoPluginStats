@@ -14,6 +14,8 @@ from typing import Dict, Union
 PLUGIN_IDS: list = [
     "ws281x_led_status",
     "eeprom_marlin",
+    "autologin_config",
+    "virtual_printerconfig"
 ]
 DATA_URL: str = "https://data.octoprint.org/export/"
 STATS_30_DAYS: str = DATA_URL + "plugin_stats_30d.json"
