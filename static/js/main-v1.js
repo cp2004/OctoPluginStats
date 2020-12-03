@@ -1,5 +1,5 @@
 var date = new Date()
-var PATH_TO_STATS = "/data/stats.json?t=" + date.getTime()
+var PATH_TO_STATS = "data/stats.json?t=" + date.getTime()
 
 function ajaxGet(path, callback) {
     var xhttp = new XMLHttpRequest();
