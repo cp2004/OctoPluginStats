@@ -34,8 +34,8 @@ function getData() {
 
                 container.appendChild(pluginContainer)
             }
-            createVersionsChart(data[plugin], plugin + "Version", names[plugin] + "Versions");
-            createHistoryChart(data[plugin], plugin + "History", names[plugin] + "History (30 days)")
+            createVersionsChart(data[plugin], plugin + "Version", names[plugin] + " Versions");
+            createHistoryChart(data[plugin], plugin + "History", names[plugin] + " History (30 days)")
         }
     })
 }
