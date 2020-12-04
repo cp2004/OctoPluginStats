@@ -99,7 +99,6 @@ function createHistoryChart(data, element, name){
                 }
             }
         }
-        console.log(x_vals)
         var lines = []
 
         for (let versionIndex in versions) {
@@ -113,7 +112,6 @@ function createHistoryChart(data, element, name){
                     y_vals.push(0)
                 }
             }
-            console.log(y_vals)
             lines.push({
                 x: x_vals,
                 y: y_vals,
@@ -124,7 +122,6 @@ function createHistoryChart(data, element, name){
         layout = {
             title: name,
         }
-        console.log(lines)
         Plotly.newPlot(element, lines, layout)
     } catch (e) {
         console.log(name, e)
