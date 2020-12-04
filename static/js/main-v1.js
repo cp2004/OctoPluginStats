@@ -47,7 +47,7 @@ function add_elements(plugin){
 
     var btnContainer = document.getElementById("btnContainer")
     if (btnContainer){
-        var buttonHTML = '<a href="#' + plugin + 'Container" class="btn btn-outline-primary btn-sm mx-1">' +
+        var buttonHTML = '<a href="#' + plugin + 'Container" class="btn btn-outline-primary btn-sm m-1">' +
             names[plugin] +
             '</a>'
         btnContainer.innerHTML = btnContainer.innerHTML + buttonHTML
