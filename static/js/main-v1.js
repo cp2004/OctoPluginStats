@@ -16,40 +16,51 @@ function getData() {
     ajaxGet(PATH_TO_STATS, function (response){
         var data = JSON.parse(response.responseText)
         console.log(data)
-        createVersionsChart(data.ws281x_led_status, "ws281xVersionsContainer", "WS281x LED Status Versions")
-        createVersionsChart(data.eeprom_marlin, "eepromVersionContainer", "Marlin EEPROM Editor Versions")
-        createVersionsChart(data.autologin_config, "autologinVersionContainer", "AutoLogin Config Versions")
-        createVersionsChart(data.virtual_printerconfig, "virtualPrinterVersionContainer", "Virtual Printer Settings Versions")
+        for (let plugin in data){var container = document.getElementById('statsOverview').children[0];
+            if (container){
+                var graph = document.createElement("div")
+                graph.id = plugin
+                var wrapper = document.createElement("div")
+                wrapper.className = "col-md-6"
+                wrapper.appendChild(graph)
+                container.appendChild(wrapper)
+            }
+            createVersionsChart(data[plugin], plugin, names[plugin]);
+        }
     })
 }
 
 function createVersionsChart(data, element, name) {
     console.log(data)
-    var values = []
-    var labels = []
-    for (let version in data.versions){
-        labels.push(version)
-        values.push(data.versions[version].instances)
+    try {
+        var values = []
+        var labels = []
+        for (let version in data.versions) {
+            labels.push(version)
+            values.push(data.versions[version].instances)
+        }
+        var chartData = [{
+            values: values,
+            labels: labels,
+            hole: .4,
+            type: "pie",
+        }]
+        var layout = {
+            title: name,
+            annotations: [
+                {
+                    font: {
+                        size: 20
+                    },
+                    showarrow: false,
+                    text: data.total
+                }
+            ],
+        }
+        Plotly.newPlot(element, chartData, layout)
+    } catch (error) {
+        console.log(name, error)
     }
-    var chartData = [{
-        values: values,
-        labels: labels,
-        hole: .4,
-        type: "pie",
-    }]
-    var layout = {
-        title: name,
-        annotations :[
-            {
-                font: {
-                    size: 20
-                },
-                showarrow: false,
-                text: data.total
-            }
-        ],
-    }
-    Plotly.newPlot(element, chartData, layout)
 }
 
 function loadPage() {
