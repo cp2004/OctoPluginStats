@@ -16,28 +16,42 @@ function getData() {
     ajaxGet(PATH_TO_STATS, function (response){
         var data = JSON.parse(response.responseText)
         console.log(data)
-        for (let plugin in data){var container = document.getElementById('statsOverview').children[0];
-            if (container){
-                var pluginContainer = document.createElement("div")
-                pluginContainer.id = plugin + "Container"
-                pluginContainer.className = "col-md-12 row"
-
-                var versionGraph = document.createElement("div")
-                versionGraph.id = plugin + "Version"
-                versionGraph.className = "col-md-6"
-                pluginContainer.appendChild(versionGraph)
-
-                var historyGraph = document.createElement("div")
-                historyGraph.id = plugin + "History"
-                historyGraph.className = "col-md-6"
-                pluginContainer.appendChild(historyGraph)
-
-                container.appendChild(pluginContainer)
-            }
+        for (let plugin in data){
+            add_elements(plugin)
             createVersionsChart(data[plugin], plugin + "Version", names[plugin] + " Versions");
             createHistoryChart(data[plugin], plugin + "History", names[plugin] + " History (30 days)")
         }
     })
+}
+
+function add_elements(plugin){
+    // Adds the necessary containers & buttons to the page
+    var container = document.getElementById('statsOverview').children[0];
+    if (container){
+        var pluginContainer = document.createElement("div")
+        pluginContainer.id = plugin + "Container"
+        pluginContainer.className = "col-md-12 row"
+
+        var versionGraph = document.createElement("div")
+        versionGraph.id = plugin + "Version"
+        versionGraph.className = "col-md-6"
+        pluginContainer.appendChild(versionGraph)
+
+        var historyGraph = document.createElement("div")
+        historyGraph.id = plugin + "History"
+        historyGraph.className = "col-md-6"
+        pluginContainer.appendChild(historyGraph)
+
+        container.appendChild(pluginContainer)
+    }
+
+    var btnContainer = document.getElementById("btnContainer")
+    if (btnContainer){
+        var buttonHTML = '<a href="#' + plugin + 'Container" class="btn btn-outline-primary btn-sm mx-1">' +
+            names[plugin] +
+            '</a>'
+        btnContainer.innerHTML = btnContainer.innerHTML + buttonHTML
+    }
 }
 
 function createVersionsChart(data, element, name) {
