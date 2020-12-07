@@ -10,5 +10,6 @@ And I'll even give you a little how-to. After forking this repository:
 4. Update the name mapping in the `static/js/name-map.js` file [here](https://github.com/cp2004/OctoPluginStats/blob/main/static/js/name_map.js), 
 mapping plugin id to human readable name.
 5. Update the links in `_includes/navbar.html` & the name in `index.html` to your own ones, not mine!
+6. Make sure you have enabled the actions in repository settings. Last time I checked actions were disabled for forks by default.
 
 That should be all, if you have any questions let me know!
