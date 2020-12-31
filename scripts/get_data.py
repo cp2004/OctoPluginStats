@@ -15,8 +15,10 @@ PLUGIN_IDS: list = [
     "ws281x_led_status",
     "eeprom_marlin",
     "autologin_config",
-    "virtual_printerconfig"
+    "virtual_printerconfig",
+    "wled",
 ]
+
 DATA_URL: str = "https://data.octoprint.org/export/"
 STATS_30_DAYS: str = DATA_URL + "plugin_stats_30d.json"
 STATS_7_DAYS: str = DATA_URL + "plugin_stats_7d.json"
