@@ -15,7 +15,9 @@ export default function AppBar() {
             <MuiAppBar position="fixed">
                 <Toolbar>
                     <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-                        OctoPluginStats
+                        <Link href={"/"} color={"inherit"} underline={"none"}>
+                            OctoPluginStats
+                        </Link>
                     </Typography>
                     <Box sx={{'& .MuiLink-root': {m: 3}}}>
                         <Link
