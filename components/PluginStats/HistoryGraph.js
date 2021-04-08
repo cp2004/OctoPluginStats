@@ -13,7 +13,6 @@ export default function History (props) {
                 stroke={COLORS[index % COLORS.length]}
                 strokeWidth={2}
                 dot={false}
-                animationDuration={1000}
                 connectNulls
             />
             : undefined))

@@ -55,7 +55,7 @@ export default function PluginStats(props) {
     const pluginData = Object.keys(plugins).map(plugin => {
         return (
             <Grid key={plugin} item xs={12}>
-                <Paper elevation={2}>
+                <Paper elevation={2} sx={{minHeight: "390px"}}>
                     <Grid container sx={{p: 2}}>
                         <Grid item xs={12}>
                             <Title total={stats[plugin].total} name={plugins[plugin]} />
