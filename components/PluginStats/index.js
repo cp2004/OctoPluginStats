@@ -60,13 +60,13 @@ export default function PluginStats(props) {
                         <Grid item xs={12}>
                             <Title total={stats[plugin].total} name={plugins[plugin]} />
                         </Grid>
-                        <Grid item md={6} sm={12}>
+                        <Grid item md={6} xs={12}>
                             {Object.keys(stats[plugin].versions).length
                             ? <VersionGraph data={dataToPie(stats[plugin].versions)} />
                             : <Typography key={plugin} variant={"body1"}>No stats</Typography>}
                         </Grid>
-                        <Grid item md={6} sm={12}>
                             <HistoryGraph data={dataToLine(stats[plugin].history)} />
+                        <Grid item md={6} xs={12}>
                         </Grid>
                     </Grid>
                 </Paper>
