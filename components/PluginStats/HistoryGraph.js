@@ -1,4 +1,5 @@
 import {LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, ResponsiveContainer} from "recharts";
+import {Typography} from "@material-ui/core";
 
 const COLORS = ['#82d173', '#715aff', '#ef798a', '#ec7d10', '#2e2532', '#FFBF81', '#ef798a'];
 
@@ -18,16 +19,21 @@ export default function History (props) {
             : undefined))
 
     return (
-        <ResponsiveContainer>
-            <LineChart width={730} height={250} data={data}
-                       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis interval={7} dataKey="date"  />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                {lines}
-            </LineChart>
-        </ResponsiveContainer>
+        <>
+            <Typography variant={"h6"} align={"center"} >Version History (30 Days)</Typography>
+            <ResponsiveContainer width={"100%"} aspect={16/9}>
+                <LineChart
+                    data={data}
+                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis interval={7} dataKey="date"  />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    {lines}
+                </LineChart>
+            </ResponsiveContainer>
+        </>
     )
 }

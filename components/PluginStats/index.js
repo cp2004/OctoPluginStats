@@ -65,8 +65,8 @@ export default function PluginStats(props) {
                             ? <VersionGraph data={dataToPie(stats[plugin].versions)} />
                             : <Typography key={plugin} variant={"body1"}>No stats</Typography>}
                         </Grid>
-                            <HistoryGraph data={dataToLine(stats[plugin].history)} />
                         <Grid item md={6} xs={12}>
+                            <HistoryGraph data={dataToLine(stats[plugin].history)} />
                         </Grid>
                     </Grid>
                 </Paper>
