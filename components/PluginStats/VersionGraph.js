@@ -1,7 +1,9 @@
 import {ResponsiveContainer, PieChart, Pie, Tooltip, Legend, Cell} from "recharts";
 import Typography from "@material-ui/core/Typography";
 
-const COLORS = ['#82d173', '#715aff', '#ef798a', '#ec7d10', '#2e2532', '#FFBF81', '#ef798a'];
+import config from "../../configuration";
+
+const COLORS = config.graphs.colors;
 
 const textFormatter = (value) => <span>v{value}</span>
 

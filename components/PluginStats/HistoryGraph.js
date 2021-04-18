@@ -1,7 +1,8 @@
 import {LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, ResponsiveContainer} from "recharts";
 import {Typography} from "@material-ui/core";
+import config from "../../configuration";
 
-const COLORS = ['#82d173', '#715aff', '#ef798a', '#ec7d10', '#2e2532', '#FFBF81', '#ef798a'];
+const COLORS = config.graphs.colors;
 
 export default function History (props) {
     const {data} = props;

@@ -8,6 +8,7 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Tooltip from '@material-ui/core/Tooltip';
 import Link from "../Link";
+import config from "../../configuration"
 
 export default function AppBar() {
     return (
@@ -20,8 +21,8 @@ export default function AppBar() {
                         </Link>
                     </Typography>
                     <Box sx={{'& .MuiLink-root': {m: 3}}}>
-                        <Link
-                            href={"https://plugins.octoprint.org/by_author/#charlie-powell"}
+                        {config.all_plugins && <Link
+                            href={config.all_plugins}
                             color={"inherit"}
                             underline={"none"}
                             target={"_blank"}
@@ -29,9 +30,9 @@ export default function AppBar() {
                             <Tooltip title="Plugins" placement="bottom">
                                 <ExtensionIcon/>
                             </Tooltip>
-                        </Link>
-                        <Link
-                            href={"https://github.com/sponsors/cp2004"}
+                        </Link>}
+                        {config.support && <Link
+                            href={config.support}
                             color={"inherit"}
                             underline={"none"}
                             target={"_blank"}
@@ -39,9 +40,9 @@ export default function AppBar() {
                             <Tooltip title={"Sponsor"} placement={"bottom"}>
                                 <FavoriteIcon/>
                             </Tooltip>
-                        </Link>
-                        <Link
-                            href={"https://github.com/cp2004/OctoPluginStats"}
+                        </Link>}
+                        {config.source && <Link
+                            href={config.source}
                             color={"inherit"}
                             underline={"none"}
                             target={"_blank"}
@@ -49,7 +50,7 @@ export default function AppBar() {
                             <Tooltip title="Source" placement="bottom">
                                 <GitHubIcon/>
                             </Tooltip>
-                        </Link>
+                        </Link>}
                     </Box>
                 </Toolbar>
             </MuiAppBar>

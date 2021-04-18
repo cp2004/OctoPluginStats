@@ -4,12 +4,12 @@ import Layout from "../components/Layout";
 import PluginStats from "../components/PluginStats"
 
 import stats from "../data/stats.json"
-import plugins from "../data/plugins.json"
+import config from "../configuration"
 
 export default function Index() {
         return (
         <Layout>
-            <PluginStats stats={stats} plugins={plugins} />
+            <PluginStats stats={stats} plugins={config.plugins} />
         </Layout>
     );
 }
