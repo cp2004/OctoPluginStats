@@ -1,6 +1,8 @@
 # OctoPluginStats
 Github Pages site tracking my OctoPrint plugin statistics over time.
 
+# Warning - this is currently out of date since the site switched to React/Next.js. Currently, configuration is in `configuration.js`
+
 ## Want to use this to track your own stats? Feel free!
 And I'll even give you a little how-to. After forking this repository:
 
