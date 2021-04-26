@@ -1,13 +1,22 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
+import {createMuiTheme as createTheme, ThemeProvider} from '@material-ui/core/styles';  // This will be renamed in upcoming MUI
 import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
-import theme from '../theme';
+import useLocalStorage from "../hooks/useLocalStorage";
+import {useState} from "react";
 
 export const cache = createCache({ key: 'css', prepend: true });
+
+const makeTheme = (dark) => {
+    return createTheme({
+        palette: {
+            mode: dark ? "dark" : "light"
+        }
+    })
+}
 
 export default function MyApp(props) {
     const { Component, pageProps } = props;
@@ -19,6 +28,24 @@ export default function MyApp(props) {
             jssStyles.parentElement.removeChild(jssStyles);
         }
     }, []);
+
+    const [darkTheme, setDarkTheme] = useState(false)
+    const [localDarkTheme, setLocalDarkTheme] = useLocalStorage("darkTheme", false)
+    const theme = makeTheme(darkTheme)
+    console.log(theme)
+
+    React.useEffect(() => {
+        setDarkTheme(localDarkTheme)
+    }, [setDarkTheme, localDarkTheme])
+
+    const toggleDarkTheme = () => setDarkTheme(prevState => {
+        setLocalDarkTheme(!prevState)
+        return !prevState
+    })
+
+    // Add theming stuff to pageProps
+    pageProps.darkTheme = darkTheme
+    pageProps.toggleDarkTheme = toggleDarkTheme
 
     return (
         <CacheProvider value={cache}>
