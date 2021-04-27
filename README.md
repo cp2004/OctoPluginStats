@@ -1,17 +1,30 @@
 # OctoPluginStats
-Github Pages site tracking my OctoPrint plugin statistics over time.
+Next.js site tracking my OctoPrint plugin statistics over time.
 
-# Warning - this is currently out of date since the site switched to React/Next.js. Currently, configuration is in `configuration.js`
+Built using Next.js, Material UI and React, powered by the data at https://data.octoprint.org/export
 
 ## Want to use this to track your own stats? Feel free!
-And I'll even give you a little how-to. After forking this repository:
 
-1. Delete the stats file, `data/stats.json`, or replace it with `{}` (empty JSON)
-2. Edit the list of plugin **ids** in the `scripts/get_data.py` file, [here](https://github.com/cp2004/OctoPluginStats/blob/daf91dad6867dfc3b0fc266a2b921c3f872817b1/scripts/get_data.py#L14-L19)
-3. Run the script, either using the Github action (manually triggered) or via `python scripts/get_data.py` to generate the initial data
-4. Update the name mapping in the `static/js/name_map.js` file [here](https://github.com/cp2004/OctoPluginStats/blob/main/static/js/name_map.js), 
-mapping plugin id to human readable name.
-5. Update the links in `_includes/navbar.html` & the name in `index.html` to your own ones, not mine!
-6. Make sure you have enabled the actions in repository settings. Last time I checked actions were disabled for forks by default.
+This site is easily configured to how *you* would like it. With a little bit of configuration you can get runnning easily!
 
-That should be all, if you have any questions let me know!
+1. Fork this repository
+2. Delete the file `data/stats.json` (delete, not empty) **or** replace with empty JSON (`{}`).
+3. Edit the `configuration.js` file to your own stuff, including the list of plugin IDs and names.
+   
+   ⚠️ All IDs are lowercased by the tracking data scripts, use lowercase IDs here ⚠️
+4. (TO BE REMOVED SOON) Edit the list of IDs in `scripts/get_data.py` - this will eventually be replaced by the global configuration file
+5. Make sure you have enabled GitHub Actions in the repository settings, they are disabled (by default) for forks.
+6. You can manually trigger the 'Get new data' action.
+
+## Deploying to Vercel
+
+Simple! Sign up for an account at https://vercel.com and connect this repository.
+
+Make sure you change the default production branch to `deploy`:
+![](https://user-images.githubusercontent.com/31997505/116289008-fb18d980-a789-11eb-98d3-1b74e58393e6.png)
+
+Deploying to GitHub pages would take a bit more configuration to create the build, but it would be possible. Not investigated yet.
+
+## Contributing
+
+Using the above workflow, contributing should be easy. If you have changes you want to make upstream, feel free.
