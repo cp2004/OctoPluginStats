@@ -17,8 +17,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - name: Install dependencies
+      - name: Install npm 7 & dependencies
         run : |
+          npm install -g npm@7
           npm install
       - name: 🚀 Run script
         run: |
