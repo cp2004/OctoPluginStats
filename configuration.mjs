@@ -10,7 +10,7 @@ const config = {
     support: "https://github.com/sponsors/cp2004",  // Sponsors URL
     all_plugins: "https://plugins.octoprint.org/by_author/#charlie-powell",
     stats: {
-        keep: 30  // Number of days of stats to keep
+        keep_30: 30  // Number of days of stats to keep
     },
     graphs: {
         colors: ['#82d173', '#715aff', '#ef798a', '#ec7d10', '#2e2532', '#FFBF81', '#ef798a']

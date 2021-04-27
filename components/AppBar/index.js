@@ -8,7 +8,7 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Tooltip from '@material-ui/core/Tooltip';
 import Link from "../Link";
-import config from "../../configuration"
+import config from "../../configuration.mjs"
 import DarkModeToggle from "../DarkModeToggle";
 
 export default function AppBar(props) {
