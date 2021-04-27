@@ -25,6 +25,11 @@ Make sure you change the default production branch to `deploy`:
 
 Deploying to GitHub pages would take a bit more configuration to create the build, but it would be possible. Not investigated yet.
 
+## Using these things
+
+* Material UI V5 (alpha) [docs](https://next.material-ui.com)
+* Next.JS
+
 ## Contributing
 
 Using the above workflow, contributing should be easy. If you have changes you want to make upstream, feel free.
