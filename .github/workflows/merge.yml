@@ -1,0 +1,20 @@
+# Sync the deploy branch with the development branch to allow for data to
+# only be updated in a separate branch, reducing conflicts with other forks
+name: Sync deployment branches
+on:
+  push:
+    branches:
+      - next
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge next -> deploy
+        uses: devmasx/merge-branch@v1.3.1
+        with:
+          type: now
+          from_branch: next
+          target_branch: deploy
+          github_token: ${{ github.token }}

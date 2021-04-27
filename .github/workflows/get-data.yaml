@@ -1,7 +1,7 @@
 name: Get new data
 on:
   schedule:
-    # Every day, 5 mins past, hopefully?
+    # Every day, 5 mins past. Why 5 mins? Why not?!
     - cron: "5 0 * * *"
   workflow_dispatch:
 
@@ -26,4 +26,6 @@ jobs:
           message: '📈 Update stats'
           author_name: 'github-actions[bot]'
           author_email: 'github-actions[bot]@users.noreply.github.com'
+          # Commit to deploy branch to avoid conflicts
+          branch: deploy
 
