@@ -1,6 +1,6 @@
 import {LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, ResponsiveContainer} from "recharts";
 import {Typography} from "@material-ui/core";
-import config from "../../configuration";
+import config from "../../configuration.mjs";
 
 const COLORS = config.graphs.colors;
 

@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import PluginStats from "../components/PluginStats"
 
 import stats from "../data/stats.json"
-import config from "../configuration"
+import config from "../configuration.mjs"
 import Paper from "@material-ui/core/Paper";
 
 export default function Index(props) {
