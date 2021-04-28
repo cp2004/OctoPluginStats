@@ -12,7 +12,6 @@ This site is easily configured to how *you* would like it. With a little bit of 
 3. Edit the `configuration.js` file to your own stuff, including the list of plugin IDs and names.
    
    ⚠️ All IDs are lowercased by the tracking data scripts, use lowercase IDs here ⚠️
-4. (TO BE REMOVED SOON) Edit the list of IDs in `scripts/get_data.py` - this will eventually be replaced by the global configuration file
 5. Make sure you have enabled GitHub Actions in the repository settings, they are disabled (by default) for forks.
 6. You can manually trigger the 'Get new data' action.
 
