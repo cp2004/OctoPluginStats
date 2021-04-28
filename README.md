@@ -9,7 +9,7 @@ This site is easily configured to how *you* would like it. With a little bit of 
 
 1. Fork this repository
 2. Delete the file `data/stats.json` (delete, not empty) **or** replace with empty JSON (`{}`).
-3. Edit the `configuration.js` file to your own stuff, including the list of plugin IDs and names.
+3. Edit the `configurationm.js` file to your own stuff, including the list of plugin IDs and names.
    
    ⚠️ All IDs are lowercased by the tracking data scripts, use lowercase IDs here ⚠️
 5. Make sure you have enabled GitHub Actions in the repository settings, they are disabled (by default) for forks.
