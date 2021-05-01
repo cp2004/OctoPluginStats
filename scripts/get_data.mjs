@@ -38,6 +38,7 @@ const get30DayData = async (data) => {
                     versions: plugin_data.versions,
                 }
             }
+            console.log(data[plugin_id])
             if (data[plugin_id].history.length >= config.stats.keep_30 && data[plugin_id].history[config.stats.keep_30 - 1].date !== TODAY){
                 // Remove earliest day, if required
                 data[plugin_id].history.shift()
