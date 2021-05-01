@@ -31,6 +31,7 @@ const get30DayData = async (data) => {
         }).forEach(([plugin_id, plugin_data]) => {
             console.log("Processing data for " + plugin_id)
             // Process totals & versions
+            console.log(data[plugin_id])
             data[plugin_id] = {
                 ...data[plugin_id],
                 ...{
@@ -43,6 +44,7 @@ const get30DayData = async (data) => {
                 // Remove earliest day, if required
                 data[plugin_id].history.shift()
             }
+            console.log(data[plugin_id])
             if (
                 !data[plugin_id].history.length || (
                     data[plugin_id].history.length
