@@ -1,5 +1,4 @@
 import fs from "fs"
-import path from "path"
 import fetch from "node-fetch";
 
 import config from "../configuration.mjs"
@@ -14,7 +13,7 @@ const TODAY = new Date().toISOString().split("T")[0]
 let DATA = {}
 
 // Read current data (if any)
-const data_filename = path.resolve("..", "data", "stats.json")
+const data_filename = new URL('../data/stats.json', import.meta.url)
 console.log(data_filename)
 if (fs.existsSync(data_filename)) {
     console.log("Reading stored data")
