@@ -2,7 +2,6 @@ import fs from "fs"
 import fetch from "node-fetch";
 
 import config from "../configuration.mjs"
-console.log(config)
 
 const DATA_URL = "https://data.octoprint.org/export/"
 const STATS_30_DAYS = DATA_URL + "plugin_stats_30d.json"
@@ -31,7 +30,6 @@ const get30DayData = async (data) => {
         }).forEach(([plugin_id, plugin_data]) => {
             console.log("Processing data for " + plugin_id)
             // Process totals & versions
-            console.log(data[plugin_id])
             data[plugin_id] = {
                 history: [],
                 ...data[plugin_id],
@@ -40,12 +38,10 @@ const get30DayData = async (data) => {
                     versions: plugin_data.versions,
                 }
             }
-            console.log(data[plugin_id])
             if (data[plugin_id].history.length >= config.stats.keep_30 && data[plugin_id].history[config.stats.keep_30 - 1].date !== TODAY){
                 // Remove earliest day, if required
                 data[plugin_id].history.shift()
             }
-            console.log(data[plugin_id])
             if (
                 !data[plugin_id].history.length || (
                     data[plugin_id].history.length
