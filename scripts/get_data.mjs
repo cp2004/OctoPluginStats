@@ -15,6 +15,7 @@ let DATA = {}
 
 // Read current data (if any)
 const data_filename = path.resolve("..", "data", "stats.json")
+console.log(data_filename)
 if (fs.existsSync(data_filename)) {
     console.log("Reading stored data")
     const content = fs.readFileSync(data_filename, {encoding: "utf-8"})
@@ -33,6 +34,7 @@ const get30DayData = async (data) => {
             // Process totals & versions
             console.log(data[plugin_id])
             data[plugin_id] = {
+                history: [],
                 ...data[plugin_id],
                 ...{
                     total: plugin_data.instances,
@@ -65,5 +67,5 @@ const get30DayData = async (data) => {
 
 get30DayData(DATA).then(data => {
     // Write data back to the file
-    fs.writeFileSync(data_filename, JSON.stringify(DATA))
+    fs.writeFileSync(data_filename, JSON.stringify(data, undefined, 2))
 })
