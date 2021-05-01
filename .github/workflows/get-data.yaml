@@ -31,4 +31,5 @@ jobs:
           author_email: 'github-actions[bot]@users.noreply.github.com'
           # Commit to deploy branch to avoid conflicts
           branch: deploy
+          add: "data/stats.json"
 
