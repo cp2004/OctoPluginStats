@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import {createMuiTheme as createTheme, ThemeProvider} from '@material-ui/core/styles';  // This will be renamed in upcoming MUI
+import {ThemeProvider, createTheme} from '@material-ui/core/styles';
 import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
