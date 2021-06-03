@@ -1,7 +1,7 @@
-import fs from "fs"
-import fetch from "node-fetch";
+const fs = require("fs")
+const fetch = require("node-fetch")
 
-import config from "../configuration.mjs"
+const config = require("../configuration.json")
 
 const DATA_URL = "https://data.octoprint.org/export/"
 const STATS_30_DAYS = DATA_URL + "plugin_stats_30d.json"

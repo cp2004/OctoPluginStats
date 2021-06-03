@@ -1,7 +1,7 @@
 import {ResponsiveContainer, PieChart, Pie, Tooltip, Legend, Cell} from "recharts";
 import Typography from "@material-ui/core/Typography";
 
-import config from "../../configuration.mjs";
+import config from "../../configuration.json";
 
 const COLORS = config.graphs.colors;
 

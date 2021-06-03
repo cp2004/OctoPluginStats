@@ -8,11 +8,9 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Tooltip from '@material-ui/core/Tooltip';
 import Link from "../Link";
-import config from "../../configuration.mjs"
-import DarkModeToggle from "../DarkModeToggle";
+import config from "../../configuration.json"
 
 export default function AppBar(props) {
-    const {darkTheme, toggleDarkTheme} = props
     return (
         <Box sx={{ flexGrow: 1 }}>
             <MuiAppBar position="fixed">
@@ -23,7 +21,6 @@ export default function AppBar(props) {
                         </Link>
                     </Typography>
                     <Box flex sx={{display: "flex", '& .MuiLink-root': {mx: 3, my: "auto", display: "flex"}}}>
-                        <DarkModeToggle sx={{mr: 2}} darkTheme={darkTheme} onToggle={toggleDarkTheme}/>
                         {config.all_plugins && <Link
                             href={config.all_plugins}
                             color={"inherit"}
