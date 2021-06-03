@@ -4,7 +4,7 @@ import Container from "@material-ui/core/Container";
 export default function Layout (props) {
     return (
         <>
-            <AppBar darkTheme={props.darkTheme} toggleDarkTheme={props.toggleDarkTheme} />
+            <AppBar />
             <Container maxWidth={false} sx={{marginTop: 2}}>
                 {props.children}
             </Container>

@@ -23,7 +23,7 @@ jobs:
           npm install
       - name: 🚀 Run script
         run: |
-          node scripts/get_data.mjs
+          node scripts/get_data.js
       - uses: EndBug/add-and-commit@v5
         with:
           message: '📈 Update stats'
