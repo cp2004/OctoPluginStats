@@ -2,7 +2,9 @@ import {LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, Responsiv
 import {Typography} from "@material-ui/core";
 import config from "../../configuration.json";
 
-const COLORS = config.graphs.colors;
+const COLORS = (config.graphs.colors);
+
+const totalColour = "#941C2F"
 
 export default function History (props) {
     const {data} = props;
@@ -12,7 +14,7 @@ export default function History (props) {
                 key={version}
                 type={"monotone"}
                 dataKey={version}
-                stroke={COLORS[index % COLORS.length]}
+                stroke={index > 0 ? COLORS[index - 1 % COLORS.length] : totalColour}
                 strokeWidth={2}
                 dot={false}
                 connectNulls

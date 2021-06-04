@@ -11,7 +11,7 @@ const dataToPie = (data) => Object.keys(data).map(version => ({version: version,
 
 // Clean the data to a Line graph readable format
 const dataToLine = (data) => {
-    const seenVersions = []
+    const seenVersions = ["total"]  // Total will *always* be included
 
     // First pass through the data *backwards* to find all the possible versions
     // Backwards means that the colours should match the Pie chart & be in order
@@ -35,6 +35,7 @@ const dataToLine = (data) => {
         // Create data-with-holes
         const resultData = {
             date: item.date,
+            total: item.total
         }
         Object.keys(item.versions).forEach(version => {
             resultData[version] = item.versions[version].instances
