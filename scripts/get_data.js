@@ -1,4 +1,5 @@
 const fs = require("fs")
+const path = require("path")
 const fetch = require("node-fetch")
 
 const config = require("../configuration.json")
@@ -12,7 +13,7 @@ const TODAY = new Date().toISOString().split("T")[0]
 let DATA = {}
 
 // Read current data (if any)
-const data_filename = new URL('../data/stats.json', import.meta.url)
+const data_filename = path.join(__dirname, "../data/stats.json")
 console.log(data_filename)
 if (fs.existsSync(data_filename)) {
     console.log("Reading stored data")
