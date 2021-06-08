@@ -2,33 +2,6 @@
   "eeprom_marlin": {
     "history": [
       {
-        "date": "2021-05-09",
-        "total": 5216,
-        "versions": {
-          "3.0.2": {
-            "instances": 2961
-          },
-          "1.2.1": {
-            "instances": 1584
-          },
-          "3.0.1": {
-            "instances": 965
-          },
-          "2.0.0": {
-            "instances": 137
-          },
-          "3.0.0": {
-            "instances": 82
-          },
-          "1.4": {
-            "instances": 46
-          },
-          "1.0.4": {
-            "instances": 9
-          }
-        }
-      },
-      {
         "date": "2021-05-10",
         "total": 5202,
         "versions": {
@@ -840,24 +813,63 @@
             "instances": 8
           }
         }
+      },
+      {
+        "date": "2021-06-08",
+        "total": 5124,
+        "versions": {
+          "3.0.2": {
+            "instances": 3220
+          },
+          "1.2.1": {
+            "instances": 1428
+          },
+          "3.0.1": {
+            "instances": 507
+          },
+          "3.1.0": {
+            "instances": 135
+          },
+          "2.0.0": {
+            "instances": 106
+          },
+          "3.0.0": {
+            "instances": 53
+          },
+          "1.4": {
+            "instances": 42
+          },
+          "3.1.0rc1": {
+            "instances": 18
+          },
+          "3.1.0rc2": {
+            "instances": 16
+          },
+          "1.0.4": {
+            "instances": 8
+          }
+        }
       }
     ],
     "total": 5124,
     "versions": {
       "3.0.2": {
-        "instances": 3214
+        "instances": 3220
       },
       "1.2.1": {
-        "instances": 1442
+        "instances": 1428
       },
       "3.0.1": {
-        "instances": 518
+        "instances": 507
+      },
+      "3.1.0": {
+        "instances": 135
       },
       "2.0.0": {
         "instances": 106
       },
       "3.0.0": {
-        "instances": 57
+        "instances": 53
       },
       "1.4": {
         "instances": 42
@@ -866,7 +878,7 @@
         "instances": 18
       },
       "3.1.0rc2": {
-        "instances": 15
+        "instances": 16
       },
       "1.0.4": {
         "instances": 8
@@ -875,24 +887,6 @@
   },
   "ws281x_led_status": {
     "history": [
-      {
-        "date": "2021-05-09",
-        "total": 770,
-        "versions": {
-          "0.7.2": {
-            "instances": 644
-          },
-          "0.6.0": {
-            "instances": 137
-          },
-          "0.7.1": {
-            "instances": 81
-          },
-          "0.7.0": {
-            "instances": 44
-          }
-        }
-      },
       {
         "date": "2021-05-10",
         "total": 770,
@@ -1414,18 +1408,36 @@
             "instances": 15
           }
         }
+      },
+      {
+        "date": "2021-06-08",
+        "total": 784,
+        "versions": {
+          "0.7.2": {
+            "instances": 701
+          },
+          "0.6.0": {
+            "instances": 87
+          },
+          "0.7.1": {
+            "instances": 19
+          },
+          "0.7.0": {
+            "instances": 15
+          }
+        }
       }
     ],
     "total": 784,
     "versions": {
       "0.7.2": {
-        "instances": 698
+        "instances": 701
       },
       "0.6.0": {
-        "instances": 91
+        "instances": 87
       },
       "0.7.1": {
-        "instances": 18
+        "instances": 19
       },
       "0.7.0": {
         "instances": 15
@@ -1434,18 +1446,6 @@
   },
   "autologin_config": {
     "history": [
-      {
-        "date": "2021-05-09",
-        "total": 748,
-        "versions": {
-          "0.2.0": {
-            "instances": 739
-          },
-          "0.1.2": {
-            "instances": 12
-          }
-        }
-      },
       {
         "date": "2021-05-10",
         "total": 751,
@@ -1793,12 +1793,24 @@
             "instances": 9
           }
         }
+      },
+      {
+        "date": "2021-06-08",
+        "total": 729,
+        "versions": {
+          "0.2.0": {
+            "instances": 720
+          },
+          "0.1.2": {
+            "instances": 9
+          }
+        }
       }
     ],
-    "total": 728,
+    "total": 729,
     "versions": {
       "0.2.0": {
-        "instances": 719
+        "instances": 720
       },
       "0.1.2": {
         "instances": 9
@@ -1807,18 +1819,6 @@
   },
   "virtual_printerconfig": {
     "history": [
-      {
-        "date": "2021-05-09",
-        "total": 238,
-        "versions": {
-          "1.5.1": {
-            "instances": 208
-          },
-          "1.5.0": {
-            "instances": 71
-          }
-        }
-      },
       {
         "date": "2021-05-10",
         "total": 239,
@@ -2166,29 +2166,32 @@
             "instances": 24
           }
         }
+      },
+      {
+        "date": "2021-06-08",
+        "total": 223,
+        "versions": {
+          "1.5.1": {
+            "instances": 210
+          },
+          "1.5.0": {
+            "instances": 22
+          }
+        }
       }
     ],
-    "total": 225,
+    "total": 223,
     "versions": {
       "1.5.1": {
-        "instances": 212
+        "instances": 210
       },
       "1.5.0": {
-        "instances": 24
+        "instances": 22
       }
     }
   },
   "wled": {
     "history": [
-      {
-        "date": "2021-05-09",
-        "total": 331,
-        "versions": {
-          "0.1.0": {
-            "instances": 329
-          }
-        }
-      },
       {
         "date": "2021-05-10",
         "total": 337,
@@ -2476,15 +2479,27 @@
             "instances": 157
           }
         }
+      },
+      {
+        "date": "2021-06-08",
+        "total": 324,
+        "versions": {
+          "0.1.0": {
+            "instances": 301
+          },
+          "0.2.0": {
+            "instances": 166
+          }
+        }
       }
     ],
-    "total": 327,
+    "total": 324,
     "versions": {
       "0.1.0": {
-        "instances": 305
+        "instances": 301
       },
       "0.2.0": {
-        "instances": 157
+        "instances": 166
       }
     }
   }
