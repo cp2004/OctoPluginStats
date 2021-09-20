@@ -1,12 +1,12 @@
 import * as React from 'react';
-import MuiAppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import ExtensionIcon from '@material-ui/icons/Extension';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import Tooltip from '@material-ui/core/Tooltip';
+import MuiAppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import Tooltip from '@mui/material/Tooltip';
 import Link from "../Link";
 import config from "../../configuration.json"
 

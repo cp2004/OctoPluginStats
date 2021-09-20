@@ -1,21 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import {ThemeProvider, createTheme} from '@material-ui/core/styles';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 import createCache from '@emotion/cache';
 import {useMedia} from "../hooks/useMedia";
+import {makeTheme} from "../components/theme";
 
 export const cache = createCache({ key: 'css', prepend: true });
-
-const makeTheme = (dark) => {
-    return createTheme({
-        palette: {
-            mode: dark ? "dark" : "light"
-        }
-    })
-}
 
 export default function MyApp(props) {
     const { Component, pageProps } = props;
@@ -30,7 +23,7 @@ export default function MyApp(props) {
         // Media queries go here
     }, []);
 
-    const darkTheme = useMedia(["(prefers-color-scheme: dark)"], [true], false);
+    const darkTheme = true // useMedia(["(prefers-color-scheme: dark)"], [true], false);
 
     const theme = makeTheme(darkTheme)
 
@@ -40,10 +33,12 @@ export default function MyApp(props) {
                 <title>OctoPluginStats</title>
                 <meta name="viewport" content="initial-scale=1, width=device-width" />
             </Head>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <Component {...pageProps} />
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={theme}>
+                    <CssBaseline />
+                    <Component {...pageProps} />
+                </ThemeProvider>
+            </StyledEngineProvider>
         </CacheProvider>
     );
 }

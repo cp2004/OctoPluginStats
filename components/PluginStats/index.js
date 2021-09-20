@@ -1,8 +1,8 @@
 import VersionGraph from "./VersionGraph";
 import * as React from "react";
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
 import Title from "./Title";
 import HistoryGraph from "./HistoryGraph"
 

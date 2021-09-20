@@ -1,5 +1,5 @@
 import {ResponsiveContainer, PieChart, Pie, Tooltip, Legend, Cell} from "recharts";
-import Typography from "@material-ui/core/Typography";
+import Typography from "@mui/material/Typography";
 
 import config from "../../configuration.json";
 

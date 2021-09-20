@@ -2,7 +2,7 @@ import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import {CacheProvider} from "@emotion/react";
 import createCache from "@emotion/cache";
-import { ServerStyleSheets } from '@material-ui/styles';
+import { ServerStyleSheets } from '@mui/styles';
 import createEmotionServer from '@emotion/server/create-instance';
 
 const getCache = () => {
@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
                     <meta name="theme-color" content={"#303f9f"} />
                     <link
                         rel="stylesheet"
-                        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+                        href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&display=swap"
                     />
                 </Head>
                 <body>
