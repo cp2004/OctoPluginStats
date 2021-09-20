@@ -1,5 +1,5 @@
 import {LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, ResponsiveContainer} from "recharts";
-import {Typography} from "@material-ui/core";
+import {Typography} from "@mui/material";
 import config from "../../configuration.json";
 
 const COLORS = (config.graphs.colors);
@@ -23,7 +23,7 @@ export default function History (props) {
 
     return (
         <>
-            <Typography variant={"h6"} align={"center"} >Version History (30 Days)</Typography>
+            <Typography variant={"h5"} align={"center"} >Version History (30 Days)</Typography>
             <ResponsiveContainer width={"100%"} aspect={16/9}>
                 <LineChart
                     data={data}

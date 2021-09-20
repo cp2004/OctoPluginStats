@@ -5,7 +5,7 @@ import PluginStats from "../components/PluginStats"
 
 import stats from "../data/stats.json"
 import config from "../configuration.json"
-import Paper from "@material-ui/core/Paper";
+import Paper from "@mui/material/Paper";
 
 export default function Index(props) {
     // Pass props down to the rest of the components

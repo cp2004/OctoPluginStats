@@ -1,10 +1,12 @@
 import VersionGraph from "./VersionGraph";
 import * as React from "react";
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
 import Title from "./Title";
 import HistoryGraph from "./HistoryGraph"
+import {Divider, Stack} from "@mui/material";
+import Box from "@mui/material/Box";
 
 // Clean the data to a Pie chart readable format
 const dataToPie = (data) => Object.keys(data).map(version => ({version: version, value: data[version].instances}))
@@ -55,29 +57,25 @@ export default function PluginStats(props) {
 
     const pluginData = Object.keys(plugins).map(plugin => {
         return (
-            <Grid key={plugin} item xs={12}>
-                <Paper elevation={2} sx={{minHeight: "390px"}}>
-                    <Grid container sx={{p: 2}}>
-                        <Grid item xs={12}>
-                            <Title total={stats[plugin].total} name={plugins[plugin]} />
-                        </Grid>
-                        <Grid item md={6} xs={12}>
-                            {Object.keys(stats[plugin].versions).length
-                            ? <VersionGraph data={dataToPie(stats[plugin].versions)} />
-                            : <Typography key={plugin} variant={"body1"}>No stats</Typography>}
-                        </Grid>
-                        <Grid item md={6} xs={12}>
-                            <HistoryGraph data={dataToLine(stats[plugin].history)} />
-                        </Grid>
+            <Box key={plugin} sx={{minHeight: "390px", p: 2}}>
+                <Title total={stats[plugin].total} name={plugins[plugin]} />
+                <Grid container>
+                    <Grid item md={6} xs={12}>
+                        {Object.keys(stats[plugin].versions).length
+                        ? <VersionGraph data={dataToPie(stats[plugin].versions)} />
+                        : <Typography key={plugin} variant={"body1"}>No stats</Typography>}
                     </Grid>
-                </Paper>
-            </Grid>
+                    <Grid item md={6} xs={12}>
+                        <HistoryGraph data={dataToLine(stats[plugin].history)} />
+                    </Grid>
+                </Grid>
+            </Box>
         )
     })
 
     return (
-        <Grid container spacing={2} sx={{textAlign: "center"}}>
+        <Stack spacing={2} divider={<Divider />}  sx={{textAlign: "center"}}>
             {pluginData}
-        </Grid>
+        </Stack>
     )
 }

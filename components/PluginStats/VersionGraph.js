@@ -1,5 +1,5 @@
 import {ResponsiveContainer, PieChart, Pie, Tooltip, Legend, Cell} from "recharts";
-import Typography from "@material-ui/core/Typography";
+import Typography from "@mui/material/Typography";
 
 import config from "../../configuration.json";
 
@@ -13,7 +13,7 @@ export default function Chart (props) {
     const {data} = props
     return (
         <>
-            <Typography variant={"h6"} align={"center"}>
+            <Typography variant={"h5"} align={"center"}>
                 Seen Versions
             </Typography>
             <ResponsiveContainer width={"100%"} aspect={16/9}>
