@@ -23,7 +23,7 @@ export default function History (props) {
 
     return (
         <>
-            <Typography variant={"h6"} align={"center"} >Version History (30 Days)</Typography>
+            <Typography variant={"h5"} align={"center"} >Version History (30 Days)</Typography>
             <ResponsiveContainer width={"100%"} aspect={16/9}>
                 <LineChart
                     data={data}

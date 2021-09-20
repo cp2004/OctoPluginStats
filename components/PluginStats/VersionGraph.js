@@ -13,7 +13,7 @@ export default function Chart (props) {
     const {data} = props
     return (
         <>
-            <Typography variant={"h6"} align={"center"}>
+            <Typography variant={"h5"} align={"center"}>
                 Seen Versions
             </Typography>
             <ResponsiveContainer width={"100%"} aspect={16/9}>
