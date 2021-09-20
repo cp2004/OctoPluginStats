@@ -1,4 +1,4 @@
-import AppBar from "../AppBar"
+import AppBar from "./AppBar"
 import Container from "@mui/material/Container";
 import {styled} from "@mui/material";
 
