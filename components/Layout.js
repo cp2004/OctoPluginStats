@@ -9,7 +9,7 @@ export default function Layout (props) {
         <>
             <AppBar />
             <Offset />
-            <Container maxWidth={false} sx={{marginTop: 2}}>
+            <Container maxWidth={false} sx={{marginTop: {xs: 4, sm: 2}}}>
                 {props.children}
             </Container>
             {/* TODO add a footer */}
