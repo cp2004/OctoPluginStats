@@ -15,7 +15,7 @@ export default function Layout (props) {
                 {props.children}
             </Container>
             <Divider />
-            <Stack sx={{my: 8, alignItems: 'center', "& > .MuiTypography-root": {my: 2}}}>
+            <Stack sx={{m: 8, alignItems: 'center', "& > .MuiTypography-root": {my: 2}}}>
                 <Typography variant={"h6"}>
                     OctoPluginStats | Created by Charlie Powell
                 </Typography>
