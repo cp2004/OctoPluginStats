@@ -12,6 +12,28 @@ const TODAY = new Date().toISOString().split("T")[0]
 
 let DATA = {}
 
+
+function descendingComparator (a, b, orderBy) {
+    if (a[orderBy] < b[orderBy]) {
+        return 1
+    } else if (a[orderBy] > b[orderBy]) {
+        return -1
+    } else {
+        return 0
+    }
+}
+
+function stableSort (array, comparator) {
+    const stabilizedThis = array.map((el, index) => [el, index])
+    stabilizedThis.sort((a, b) => {
+        const order = comparator(a[0], b[0])
+        if (order !== 0) return order
+        return a[1] - b[1]
+    })
+    return stabilizedThis.map(el => el[0])
+}
+
+
 // Read current data (if any)
 const data_filename = path.join(__dirname, "../data/stats.json")
 console.log(data_filename)
@@ -29,16 +51,34 @@ const get30DayData = async (data) => {
             const [plugin_id] = plugin
             return !!config.plugins[plugin_id]
         }).forEach(([plugin_id, plugin_data]) => {
+
             console.log("Processing data for " + plugin_id)
-            // Process totals & versions
+
+            // Map data to a good format
+            const versions = Object.entries(plugin_data.versions).map(([version, stats]) => {
+                return {
+                    version: version,
+                    instances: stats.instances
+                }
+            })
+
+            // Sort the versions stats
+            const versionsSorted = stableSort(
+                versions,
+                (a, b) => {
+                return descendingComparator(a, b, "instances")
+            })
+
+            // Output totals & versions
             data[plugin_id] = {
                 history: [],
                 ...data[plugin_id],
                 ...{
                     total: plugin_data.instances,
-                    versions: plugin_data.versions,
+                    versions: versionsSorted,
                 }
             }
+
             if (data[plugin_id].history.length >= config.stats.keep_30 && data[plugin_id].history[config.stats.keep_30 - 1].date !== TODAY){
                 // Remove earliest day, if required
                 data[plugin_id].history.shift()
@@ -53,7 +93,7 @@ const get30DayData = async (data) => {
                     {
                         date: TODAY,
                         total: plugin_data.instances,
-                        versions: plugin_data.versions,
+                        versions: versionsSorted,
                     }
                 )
             }
