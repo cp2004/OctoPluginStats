@@ -9,7 +9,14 @@ import {Divider, Stack} from "@mui/material";
 import Box from "@mui/material/Box";
 
 // Clean the data to a Pie chart readable format
-const dataToPie = (data) => Object.keys(data).map(version => ({version: version, value: data[version].instances}))
+const dataToPie = (data) => {
+    if (Array.isArray(data)){
+        return data.map(entry => ({version: entry.version, value: entry.instances}))
+    } else {
+        // Old style as an object not an array
+        return Object.keys(data).map(version => ({version: version, value: data[version].instances}))
+    }
+}
 
 // Clean the data to a Line graph readable format
 const dataToLine = (data) => {
@@ -19,11 +26,20 @@ const dataToLine = (data) => {
     // Backwards means that the colours should match the Pie chart & be in order
     // on the legend for the most recent versions. Just looks neater
     data.slice().reverse().forEach(item => {
-        Object.keys(item.versions).forEach(version => {
-            if (!seenVersions.includes(version)){
-                seenVersions.push(version)
-            }
-        })
+        if (Array.isArray(item.versions)) {
+            item.versions.forEach(entry => {
+                if (!seenVersions.includes(entry.version)) {
+                    seenVersions.push(entry.version)
+                }
+            })
+        } else {
+            // Old style as an object not an array
+            Object.keys(item.versions).forEach(version => {
+                if (!seenVersions.includes(version)){
+                    seenVersions.push(version)
+                }
+            })
+        }
     })
 
     // Now pass through each date, first creating an empty set of data and
@@ -39,9 +55,16 @@ const dataToLine = (data) => {
             date: item.date,
             total: item.total
         }
-        Object.keys(item.versions).forEach(version => {
-            resultData[version] = item.versions[version].instances
-        })
+        if (Array.isArray(item.versions)) {
+            item.versions.forEach(entry => {
+                resultData[entry.version] = entry.instances
+            })
+        } else {
+            // Old style as an object not an array
+            Object.keys(item.versions).forEach(version => {
+                resultData[version] = item.versions[version].instances
+            })
+        }
 
         // Finish with data with no holes :)
         return {
