@@ -8,7 +8,7 @@ import ExtensionIcon from '@mui/icons-material/Extension';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Tooltip from '@mui/material/Tooltip';
 import Link from "./Link";
-import config from "../configuration.json"
+import config from "../../configuration.json"
 
 const linkProps = {
     color: 'inherit',

@@ -1,25 +1,6 @@
-import VersionGraph from "./VersionGraph";
-import * as React from "react";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import Title from "./Title";
-import HistoryGraph from "./HistoryGraph"
-import {Divider, Stack} from "@mui/material";
-import Box from "@mui/material/Box";
-
-// Clean the data to a Pie chart readable format
-const dataToPie = (data) => {
-    if (Array.isArray(data)){
-        return data.map(entry => ({version: entry.version, value: entry.instances}))
-    } else {
-        // Old style as an object not an array
-        return Object.keys(data).map(version => ({version: version, value: data[version].instances}))
-    }
-}
-
+// @ts-nocheck
 // Clean the data to a Line graph readable format
-const dataToLine = (data) => {
+function dataToLine (data) {
     const seenVersions = ["total"]  // Total will *always* be included
 
     // First pass through the data *backwards* to find all the possible versions
@@ -74,31 +55,4 @@ const dataToLine = (data) => {
     })
 }
 
-export default function PluginStats(props) {
-    const {plugins, stats} = props;
-
-
-    const pluginData = Object.keys(plugins).map(plugin => {
-        return (
-            <Box key={plugin} sx={{minHeight: "390px", p: 2}}>
-                <Title total={stats[plugin].total} name={plugins[plugin]} />
-                <Grid container>
-                    <Grid item md={6} xs={12}>
-                        {Object.keys(stats[plugin].versions).length
-                        ? <VersionGraph data={dataToPie(stats[plugin].versions)} />
-                        : <Typography key={plugin} variant={"body1"}>No stats</Typography>}
-                    </Grid>
-                    <Grid item md={6} xs={12}>
-                        <HistoryGraph data={dataToLine(stats[plugin].history)} />
-                    </Grid>
-                </Grid>
-            </Box>
-        )
-    })
-
-    return (
-        <Stack spacing={2} divider={<Divider />}  sx={{textAlign: "center"}}>
-            {pluginData}
-        </Stack>
-    )
-}
+export default dataToLine
