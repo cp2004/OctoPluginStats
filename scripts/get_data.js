@@ -35,7 +35,7 @@ function stableSort (array, comparator) {
 
 
 // Read current data (if any)
-const data_filename = path.join(__dirname, "../data/stats.json")
+const data_filename = path.join(__dirname, "../src/data/stats.json")
 console.log(data_filename)
 if (fs.existsSync(data_filename)) {
     console.log("Reading stored data")
