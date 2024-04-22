@@ -2,56 +2,6 @@
   "eeprom_marlin": {
     "history": [
       {
-        "date": "2024-03-23",
-        "total": 4854,
-        "versions": [
-          {
-            "version": "3.3.0",
-            "instances": 4494
-          },
-          {
-            "version": "3.2.0",
-            "instances": 174
-          },
-          {
-            "version": "1.2.1",
-            "instances": 119
-          },
-          {
-            "version": "3.1.0",
-            "instances": 76
-          },
-          {
-            "version": "3.0.2",
-            "instances": 10
-          },
-          {
-            "version": "3.0.1",
-            "instances": 8
-          },
-          {
-            "version": "1.4",
-            "instances": 6
-          },
-          {
-            "version": "2.0.0",
-            "instances": 4
-          },
-          {
-            "version": "3.0.0",
-            "instances": 1
-          },
-          {
-            "version": "3.1.0.dev193+gfc52aab.dirty",
-            "instances": 1
-          },
-          {
-            "version": "3.2.0rc2",
-            "instances": 1
-          }
-        ]
-      },
-      {
         "date": "2024-03-24",
         "total": 4871,
         "versions": [
@@ -1448,17 +1398,67 @@
             "instances": 1
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 4687,
+        "versions": [
+          {
+            "version": "3.3.0",
+            "instances": 4329
+          },
+          {
+            "version": "3.2.0",
+            "instances": 172
+          },
+          {
+            "version": "1.2.1",
+            "instances": 122
+          },
+          {
+            "version": "3.1.0",
+            "instances": 67
+          },
+          {
+            "version": "3.0.2",
+            "instances": 10
+          },
+          {
+            "version": "3.0.1",
+            "instances": 7
+          },
+          {
+            "version": "1.4",
+            "instances": 6
+          },
+          {
+            "version": "2.0.0",
+            "instances": 4
+          },
+          {
+            "version": "3.0.0",
+            "instances": 3
+          },
+          {
+            "version": "1.0.4",
+            "instances": 1
+          },
+          {
+            "version": "3.2.0rc2",
+            "instances": 1
+          }
+        ]
       }
     ],
-    "total": 4700,
+    "total": 4687,
     "versions": [
       {
         "version": "3.3.0",
-        "instances": 4343
+        "instances": 4329
       },
       {
         "version": "3.2.0",
-        "instances": 173
+        "instances": 172
       },
       {
         "version": "1.2.1",
@@ -1466,7 +1466,7 @@
       },
       {
         "version": "3.1.0",
-        "instances": 66
+        "instances": 67
       },
       {
         "version": "3.0.2",
@@ -1500,24 +1500,6 @@
   },
   "ws281x_led_status": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 797,
-        "versions": [
-          {
-            "version": "0.8.1",
-            "instances": 785
-          },
-          {
-            "version": "0.7.2",
-            "instances": 11
-          },
-          {
-            "version": "0.6.0",
-            "instances": 3
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 792,
@@ -2039,13 +2021,31 @@
             "instances": 1
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 773,
+        "versions": [
+          {
+            "version": "0.8.1",
+            "instances": 764
+          },
+          {
+            "version": "0.7.2",
+            "instances": 11
+          },
+          {
+            "version": "0.6.0",
+            "instances": 1
+          }
+        ]
       }
     ],
-    "total": 774,
+    "total": 773,
     "versions": [
       {
         "version": "0.8.1",
-        "instances": 765
+        "instances": 764
       },
       {
         "version": "0.7.2",
@@ -2059,28 +2059,6 @@
   },
   "autologin_config": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 539,
-        "versions": [
-          {
-            "version": "0.2.1",
-            "instances": 510
-          },
-          {
-            "version": "0.2.0",
-            "instances": 31
-          },
-          {
-            "version": "0.1.2",
-            "instances": 1
-          },
-          {
-            "version": "0.2.0.post4.dev0+g31e4026",
-            "instances": 1
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 534,
@@ -2610,17 +2588,35 @@
             "instances": 1
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 525,
+        "versions": [
+          {
+            "version": "0.2.1",
+            "instances": 495
+          },
+          {
+            "version": "0.2.0",
+            "instances": 30
+          },
+          {
+            "version": "0.1.2",
+            "instances": 1
+          }
+        ]
       }
     ],
-    "total": 529,
+    "total": 525,
     "versions": [
       {
         "version": "0.2.1",
-        "instances": 499
+        "instances": 495
       },
       {
         "version": "0.2.0",
-        "instances": 31
+        "instances": 30
       },
       {
         "version": "0.1.2",
@@ -2630,24 +2626,6 @@
   },
   "virtual_printerconfig": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 209,
-        "versions": [
-          {
-            "version": "2022.7.4",
-            "instances": 200
-          },
-          {
-            "version": "1.5.1",
-            "instances": 8
-          },
-          {
-            "version": "2022.7.1",
-            "instances": 1
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 211,
@@ -3097,13 +3075,31 @@
             "instances": 1
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 223,
+        "versions": [
+          {
+            "version": "2022.7.4",
+            "instances": 212
+          },
+          {
+            "version": "1.5.1",
+            "instances": 11
+          },
+          {
+            "version": "1.5.0",
+            "instances": 1
+          }
+        ]
       }
     ],
-    "total": 221,
+    "total": 223,
     "versions": [
       {
         "version": "2022.7.4",
-        "instances": 210
+        "instances": 212
       },
       {
         "version": "1.5.1",
@@ -3117,20 +3113,6 @@
   },
   "wled": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 435,
-        "versions": [
-          {
-            "version": "0.2.1",
-            "instances": 433
-          },
-          {
-            "version": "0.1.0",
-            "instances": 2
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 437,
@@ -3536,13 +3518,27 @@
             "instances": 1
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 443,
+        "versions": [
+          {
+            "version": "0.2.1",
+            "instances": 442
+          },
+          {
+            "version": "0.1.0",
+            "instances": 1
+          }
+        ]
       }
     ],
-    "total": 440,
+    "total": 443,
     "versions": [
       {
         "version": "0.2.1",
-        "instances": 439
+        "instances": 442
       },
       {
         "version": "0.1.0",
@@ -3552,32 +3548,6 @@
   },
   "gcode_macro": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 388,
-        "versions": [
-          {
-            "version": "1.3.0",
-            "instances": 373
-          },
-          {
-            "version": "1.1.1",
-            "instances": 7
-          },
-          {
-            "version": "1.2.1",
-            "instances": 7
-          },
-          {
-            "version": "1.2.0",
-            "instances": 3
-          },
-          {
-            "version": "1.1.2",
-            "instances": 1
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 392,
@@ -4331,13 +4301,39 @@
             "instances": 1
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 398,
+        "versions": [
+          {
+            "version": "1.3.0",
+            "instances": 384
+          },
+          {
+            "version": "1.1.1",
+            "instances": 6
+          },
+          {
+            "version": "1.2.1",
+            "instances": 6
+          },
+          {
+            "version": "1.2.0",
+            "instances": 2
+          },
+          {
+            "version": "1.1.2",
+            "instances": 1
+          }
+        ]
       }
     ],
-    "total": 396,
+    "total": 398,
     "versions": [
       {
         "version": "1.3.0",
-        "instances": 382
+        "instances": 384
       },
       {
         "version": "1.1.1",
@@ -4359,20 +4355,6 @@
   },
   "onedrive_backup": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 711,
-        "versions": [
-          {
-            "version": "1.0.1",
-            "instances": 710
-          },
-          {
-            "version": "1.0.0",
-            "instances": 1
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 717,
@@ -4778,13 +4760,27 @@
             "instances": 2
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 690,
+        "versions": [
+          {
+            "version": "1.0.1",
+            "instances": 689
+          },
+          {
+            "version": "1.0.0",
+            "instances": 2
+          }
+        ]
       }
     ],
-    "total": 684,
+    "total": 690,
     "versions": [
       {
         "version": "1.0.1",
-        "instances": 683
+        "instances": 689
       },
       {
         "version": "1.0.0",
@@ -4794,24 +4790,6 @@
   },
   "onedrive_files": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 351,
-        "versions": [
-          {
-            "version": "1.0.6",
-            "instances": 343
-          },
-          {
-            "version": "1.0.5",
-            "instances": 7
-          },
-          {
-            "version": "1.0.4+3.g695112f",
-            "instances": 1
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 354,
@@ -5225,13 +5203,27 @@
             "instances": 8
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 343,
+        "versions": [
+          {
+            "version": "1.0.6",
+            "instances": 336
+          },
+          {
+            "version": "1.0.5",
+            "instances": 8
+          }
+        ]
       }
     ],
-    "total": 344,
+    "total": 343,
     "versions": [
       {
         "version": "1.0.6",
-        "instances": 337
+        "instances": 336
       },
       {
         "version": "1.0.5",
@@ -5241,20 +5233,6 @@
   },
   "camerastreamer_control": {
     "history": [
-      {
-        "date": "2024-03-23",
-        "total": 842,
-        "versions": [
-          {
-            "version": "1.0.1",
-            "instances": 779
-          },
-          {
-            "version": "1.0.0",
-            "instances": 77
-          }
-        ]
-      },
       {
         "date": "2024-03-24",
         "total": 845,
@@ -5660,17 +5638,31 @@
             "instances": 67
           }
         ]
+      },
+      {
+        "date": "2024-04-22",
+        "total": 877,
+        "versions": [
+          {
+            "version": "1.0.1",
+            "instances": 817
+          },
+          {
+            "version": "1.0.0",
+            "instances": 66
+          }
+        ]
       }
     ],
-    "total": 879,
+    "total": 877,
     "versions": [
       {
         "version": "1.0.1",
-        "instances": 818
+        "instances": 817
       },
       {
         "version": "1.0.0",
-        "instances": 67
+        "instances": 66
       }
     ]
   }
